@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "license_authorities",
+  "info": {
+    "name": "License Authority"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "regex": "^(https?):\\/\\/[^\\s$.?#].[^\\s]*$",
+      "unique": true
+    },
+    "license_classifications": {
+      "via": "license_authority",
+      "collection": "license-classification"
+    },
+    "data_url": {
+      "type": "string"
+    }
+  }
+}

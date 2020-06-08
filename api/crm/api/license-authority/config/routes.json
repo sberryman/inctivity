@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/license-authorities",
+      "handler": "license-authority.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/license-authorities/count",
+      "handler": "license-authority.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/license-authorities/:id",
+      "handler": "license-authority.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/license-authorities",
+      "handler": "license-authority.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/license-authorities/:id",
+      "handler": "license-authority.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/license-authorities/:id",
+      "handler": "license-authority.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

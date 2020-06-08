@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "license_classifications",
+  "info": {
+    "name": "License Classification"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "license_authority": {
+      "model": "license-authority",
+      "via": "license_classifications"
+    },
+    "residential": {
+      "type": "boolean"
+    },
+    "commercial": {
+      "type": "boolean"
+    }
+  }
+}

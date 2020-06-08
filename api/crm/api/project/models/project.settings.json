@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "name": "Project"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "summary": {
+      "type": "richtext"
+    },
+    "location": {
+      "type": "component",
+      "repeatable": false,
+      "component": "location.address"
+    },
+    "description": {
+      "type": "text"
+    },
+    "rfps": {
+      "collection": "rfp",
+      "via": "project"
+    },
+    "business": {
+      "model": "business"
+    }
+  }
+}

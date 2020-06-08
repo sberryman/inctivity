@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+  strapi:
+    container_name: strapi
+    image: strapi/strapi
+    environment:
+      - DATABASE_CLIENT=mongo
+      - DATABASE_HOST=db
+      - DATABASE_PORT=27017
+      - DATABASE_NAME=strapi
+      - DATABASE_USERNAME=strapi
+      - DATABASE_PASSWORD=strapi
+      - DATABASE_AUTHENTICATION_DATABASE=strapi
+    ports:
+      - 1337:1337
+    volumes:
+      - ./crm:/srv/app
+    depends_on:
+      - db
+      - minio
+
+  db:
+    container_name: mongo
+    image: mongo
+    environment:
+      - MONGO_INITDB_DATABASE=strapi
+      - MONGO_INITDB_ROOT_USERNAME=strapi
+      - MONGO_INITDB_ROOT_PASSWORD=strapi
+    ports:
+      - 27017:27017
+    volumes:
+      - ./db:/data/db
+    restart: always
+  
+  minio:
+    container_name: storage
+    image: minio/minio
+    command: server /data
+    environment:
+      - MINIO_ACCESS_KEY=5fdfa75849eb
+      - MINIO_SECRET_KEY=89b9831297f3453611ac
+    ports:
+      - 9000:9000
+    volumes:
+      - ./s3:/data

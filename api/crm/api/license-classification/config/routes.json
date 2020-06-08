@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/license-classifications",
+      "handler": "license-classification.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/license-classifications/count",
+      "handler": "license-classification.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/license-classifications/:id",
+      "handler": "license-classification.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/license-classifications",
+      "handler": "license-classification.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/license-classifications/:id",
+      "handler": "license-classification.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/license-classifications/:id",
+      "handler": "license-classification.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

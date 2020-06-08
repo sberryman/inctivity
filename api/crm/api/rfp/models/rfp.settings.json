@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rfps",
+  "info": {
+    "name": "RFP"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "project": {
+      "via": "rfps",
+      "model": "project"
+    }
+  }
+}

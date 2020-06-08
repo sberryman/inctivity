@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "licenses",
+  "info": {
+    "name": "License"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "number": {
+      "type": "string"
+    },
+    "issued": {
+      "type": "date"
+    },
+    "expiration": {
+      "type": "date"
+    },
+    "type": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "license_classification": {
+      "model": "license-classification"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_address_addresses",
+  "info": {
+    "name": "Address",
+    "icon": "map-marked-alt"
+  },
+  "options": {},
+  "attributes": {
+    "formatted": {
+      "type": "string"
+    },
+    "lat": {
+      "type": "float"
+    },
+    "lng": {
+      "type": "float"
+    },
+    "street_number": {
+      "type": "string"
+    },
+    "route": {
+      "type": "string"
+    },
+    "locality": {
+      "type": "string"
+    },
+    "admin_level_2": {
+      "type": "string"
+    },
+    "admin_level_1": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "postal_code": {
+      "type": "string"
+    },
+    "note": {
+      "type": "text"
+    }
+  }
+}

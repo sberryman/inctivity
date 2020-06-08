@@ -1,0 +1,14 @@
+{
+    "provider": "aws-s3",
+    "providerOptions": {
+      "endpoint": "http://192.168.7.171:9000",
+      "sslEnabled": false,
+      "s3ForcePathStyle": true,
+      "accessKeyId": "5fdfa75849eb",
+      "secretAccessKey": "89b9831297f3453611ac",
+      "region": "aws-region",
+      "params": {
+        "Bucket": "strapi"
+      }
+    }
+  }
